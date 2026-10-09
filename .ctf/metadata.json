@@ -4,11 +4,5 @@
   "question": "Send a crafted pickle that runs a command on the server when it is deserialized (insecure deserialization).",
   "category": "WEB",
   "difficulty": 2,
-  "evidence_kind": "SECRET",
-  "capabilities": [
-    "deserialization",
-    "pickle",
-    "remote-code-execution",
-    "python"
-  ]
+  "evidence_kind": "SECRET"
 }
