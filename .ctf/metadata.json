@@ -1,7 +1,7 @@
 {
   "title": "OWASP SKF Pickle Deserialization",
   "description": "A Flask page that 'syncs' user preferences: it takes a hex-encoded Python pickle from the form and loads it with pickle.load.",
-  "question": "Send a crafted pickle that runs a command on the server when it is deserialized (insecure deserialization).",
+  "question": "Exploit the insecure pickle deserialization of the preferences sync to run a command on the server and read /ctf/flag.",
   "category": "WEB",
   "difficulty": 2,
   "evidence_kind": "SECRET"

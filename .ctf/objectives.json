@@ -1,0 +1,52 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the flag",
+      "prompt": "Get code execution through the preferences sync and read /ctf/flag.",
+      "check": {
+        "evidence": "SECRET",
+        "format": "FLAG{%s}"
+      },
+      "dev": "FLAG{dev-skf-des-pickle}",
+      "hints": [
+        "The sync form sends a hex string that the server turns back into a Python object.",
+        "Read about insecure deserialization with Python's pickle module."
+      ],
+      "steps": [
+        {
+          "key": "module",
+          "title": "Identify the format",
+          "prompt": "Which Python module deserializes the submitted data?",
+          "check": {
+            "answer": [
+              "pickle"
+            ]
+          }
+        },
+        {
+          "key": "param",
+          "title": "Find the input",
+          "prompt": "Which form field carries the serialized object? (field name)",
+          "check": {
+            "answer": [
+              "data_obj"
+            ]
+          }
+        },
+        {
+          "key": "class",
+          "title": "Name the weakness",
+          "prompt": "What class of vulnerability is this?",
+          "check": {
+            "answer": [
+              "insecure deserialization",
+              "deserialization",
+              "pickle deserialization"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
