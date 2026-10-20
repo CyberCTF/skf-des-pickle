@@ -1,8 +1,11 @@
 {
+  "project_name": "cyberlabs-skf-des-pickle",
+  "slug": "skf-des-pickle",
   "title": "OWASP SKF Pickle Deserialization",
   "description": "A Flask page that 'syncs' user preferences: it takes a hex-encoded Python pickle from the form and loads it with pickle.load.",
-  "question": "Exploit the insecure pickle deserialization of the preferences sync to run a command on the server and read /ctf/flag.",
-  "category": "WEB",
+  "category": "web",
   "difficulty": 2,
-  "evidence_kind": "SECRET"
+  "evidence_kind": "SECRET",
+  "capabilities": [],
+  "question": "Exploit the insecure pickle deserialization of the preferences sync to run a command on the server and read /ctf/flag."
 }
